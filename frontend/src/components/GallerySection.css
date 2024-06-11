@@ -1,0 +1,23 @@
+.gallery{
+    width: 100%;
+    margin-bottom: 50px;
+}
+.gallery .top{
+    text-align: center;
+}
+
+.gallery .top h3{
+    font-size: 22px;
+    color: #666666;
+    font-weight: 400;
+}
+
+.gallery .top h2{
+    font-size: 45px;
+    color: #666666;
+}
+.gallery img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}

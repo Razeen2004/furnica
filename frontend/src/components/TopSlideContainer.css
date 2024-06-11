@@ -1,0 +1,12 @@
+.top-slide-container{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #F9F1E7;
+}
+.top-slide-container .container{
+    font-size: 18px;;
+    display: flex;
+    align-items: center;
+}

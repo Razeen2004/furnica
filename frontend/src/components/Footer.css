@@ -1,0 +1,106 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #f7f7f7;
+    padding: 30px;
+}
+.footer-bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #f7f7f7;
+    padding: 25px;
+}
+
+.footer-bottom .bottom{
+    color:#666666;
+}
+.footer .container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer .container .top{
+    width: 100%;
+}
+
+.footer .container .top .sections{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.footer .container .top .sections .sec:nth-child(1){
+    width: 40%
+}
+.footer .container .top .sections .sec{
+    width: 20%
+}
+
+.footer .container .top .sections .sec .logo{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 30px;
+    color: #666666;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.footer .container .top .sections .sec p{
+    width: 400px;
+    font-size: 16px;
+    color: #666666;
+}
+
+.footer .container .top .sections .sec h3{
+    font-size: 25px;
+    font-weight: 500;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+.footer .container .top .sections .sec ul{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.footer .container .top .sections .sec ul li{
+    list-style: none;
+    font-size: 18px;
+    color: #666666 !important;
+    cursor: pointer;
+
+}
+
+.footer .container .top .sections .sec ul li:hover{
+    color: #B88E2F !important;
+}
+.footer .container .bottom{
+    padding: 30px;
+    width: 100%;
+    border-top: 1px solid #f7f7f7;
+}
+
+.footer .container .top .sections .sec input{
+    width: 100%;
+    border: 1px solid #f7f7f7;
+    padding: 10px 20px;
+    color: #666666;
+    background: #fff;
+    font-size: 18px;
+}
+.footer .container .top .sections .sec button{
+    padding: 10px 20px;
+    width: 100%;
+    margin-top: 10px;;
+    color: #fff;
+    background: #B88E2F;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
