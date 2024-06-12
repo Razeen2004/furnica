@@ -1,10 +1,15 @@
 const express = require("express");
+const userRouter = require('./routes/userRoute');
+
+const cors = require('cors');
 const app = express();
 const port = 3000;
+app.use(cors());
+app.use(express.json());
 
 
-app.get('/api/v1/user', userRoute);
-app.get('api/v1/admin', adminRoute);
+app.use('/api/v1/user', userRouter);
+// app.get('api/v1/admin', adminRoute);
 
 app.listen(port, () =>{
     console.log(`server listening to port ${port}`);

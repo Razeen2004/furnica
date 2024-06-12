@@ -1,17 +1,41 @@
-import mongoose from 'mongoose';
+const mongoose =  require('mongoose');
+const {Schema} = mongoose;
 mongoose.connect('mongodb://127.0.0.1:27017/furnica');
 
-const { Schema } = mongoose;
-
 const userSchema = new Schema({
-  name: String, 
+  name: String,
+  email: String,
   password: String,
 });
+
+
 const adminSchema = new Schema({
     name: String, 
     password: String,
 });
+
+
 const productSchema = new Schema({
-    title: String, 
-    description: String,
+    productName: String,
+    productDes: String,
+    productPrice: String,
+    productImage: String,
+    productSale: Number,
+    productCategory: String,
+    productAbout: String,
+    productFnPrice: String,
+    productImages: [
+      {
+        product1: String,
+        product2: String,
+        product3: String,
+        product4: String,
+      }
+    ]
   });
+
+  const Product = new mongoose.model('Product', productSchema);
+  const Admin = new mongoose.model('Admin', adminSchema);
+  const User = new mongoose.model('User', userSchema);
+
+module.exports = {Product , Admin , User}
