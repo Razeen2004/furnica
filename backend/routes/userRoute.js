@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken");
 const z = require("zod");
 const bcrypt = require("bcrypt");
 const { User } = require("../db/index");
-const userRouter = express.Router();
+const Router = express.Router();
 const JWT_SECRET = require("../config");
 const userLogin = require("../middlewares/user");
 
@@ -13,7 +13,7 @@ const user = z.object({
   password: z.string(),
 });
 
-userRouter.post("/signup", async (req, res) => {
+Router.post("/signup", async (req, res) => {
   const result = await user.safeParse(req.body);
 
   if (result.success) {
@@ -41,7 +41,7 @@ userRouter.post("/signup", async (req, res) => {
   }
 });
 
-userRouter.post("/signin", userLogin, async (req, res) => {
+Router.post("/signin", async (req, res) => {
   const body = req.body;
 
   try {
@@ -50,8 +50,13 @@ userRouter.post("/signin", userLogin, async (req, res) => {
     });
     const match = await bcrypt.compare(body.password , userDetails.password)
     if (match) {
+      const token = await jwt.sign(
+        { name: userDetails.name, email: userDetails.email },
+        JWT_SECRET
+      );
+      const fnftoken = "Bearer " + token;
       res.json({
-        message: "Login",
+        token: fnftoken
       });
     } else {
       res.json({
@@ -65,4 +70,4 @@ userRouter.post("/signin", userLogin, async (req, res) => {
   }
 });
 
-module.exports = userRouter;
+module.exports = Router;

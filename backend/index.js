@@ -1,5 +1,6 @@
 const express = require("express");
 const userRouter = require('./routes/userRoute');
+const adminRouter = require('./routes/adminRoute');
 
 const cors = require('cors');
 const app = express();
@@ -9,7 +10,7 @@ app.use(express.json());
 
 
 app.use('/api/v1/user', userRouter);
-// app.get('api/v1/admin', adminRoute);
+app.use('/api/v1/admin', adminRouter);
 
 app.listen(port, () =>{
     console.log(`server listening to port ${port}`);
