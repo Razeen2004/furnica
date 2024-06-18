@@ -73,6 +73,7 @@ Router.post("/signup", async (req, res) => {
 
   Router.post('/create', adminLogin , async (req, res)=> {
     const body = req.body;
+    
 
     try{
       const productDetail = await Product.create({
