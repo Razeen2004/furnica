@@ -4,7 +4,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #F9F1E7;
 }
 .signup .container{
     display: flex;
@@ -18,9 +17,8 @@
     gap: 0px;
     width: 400px;
     padding: 30px;
-    border-radius: 20px;
-    background-color: #f2ddc2;
-    border: 1px solid #B88E2F;
+    background-color: #FFF3E3;
+    /* border: 1px solid #B88E2F; */
 }
 
 .signup .container .signup-container h2{
@@ -47,7 +45,11 @@
 }
 .signup .container .signup-container button{
     background-color: #B88E2F;
-    color: #f2ddc2;
+    color: #fff;
     border: 0px;
     height: 40px;
+}
+
+.signup .container .signup-container p a{
+    color: #B88E2F;
 }
