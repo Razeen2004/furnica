@@ -1,6 +1,6 @@
 const mongoose =  require('mongoose');
 const {Schema} = mongoose;
-mongoose.connect('mongodb://127.0.0.1:27017/furnica');
+mongoose.connect('mongodb+srv://razeen:<Bestwishes1>@cluster.bsqjsaa.mongodb.net/?retryWrites=true&w=majority&appName=Cluster');
 
 const userSchema = new Schema({
   name: String,
