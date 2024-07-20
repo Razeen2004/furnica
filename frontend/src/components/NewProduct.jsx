@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import AdminNav from './AdminNav';
 
+import Upload from '../assets/uploadImg.png';
 const NewProduct = () => {
   return (
     <div className='admin'>
@@ -69,32 +70,16 @@ const NewProduct = () => {
               <h3>Pictures</h3>
               <div className="base-info imgUpload">
                 <div className="addImg">
-                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11 24H1V1H15.5L20 5.5V10.5M10.5 18.5H3.5L7.5 13L9 14.5L12 10L13.5 12M18 14.5V21.5M15 18H21.5" stroke="black" />
-                    <circle cx="7" cy="8" r="2" stroke="black" />
-                    <circle cx="18" cy="18" r="6" stroke="black" />
-                  </svg>
+                  <img src={Upload} alt="" />
                 </div>
                 <div className="addImg">
-                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11 24H1V1H15.5L20 5.5V10.5M10.5 18.5H3.5L7.5 13L9 14.5L12 10L13.5 12M18 14.5V21.5M15 18H21.5" stroke="black" />
-                    <circle cx="7" cy="8" r="2" stroke="black" />
-                    <circle cx="18" cy="18" r="6" stroke="black" />
-                  </svg>
+                  <img src={Upload} alt="" />
                 </div>
                 <div className="addImg">
-                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11 24H1V1H15.5L20 5.5V10.5M10.5 18.5H3.5L7.5 13L9 14.5L12 10L13.5 12M18 14.5V21.5M15 18H21.5" stroke="black" />
-                    <circle cx="7" cy="8" r="2" stroke="black" />
-                    <circle cx="18" cy="18" r="6" stroke="black" />
-                  </svg>
+                  <img src={Upload} alt="" />
                 </div>
                 <div className="addImg">
-                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11 24H1V1H15.5L20 5.5V10.5M10.5 18.5H3.5L7.5 13L9 14.5L12 10L13.5 12M18 14.5V21.5M15 18H21.5" stroke="black" />
-                    <circle cx="7" cy="8" r="2" stroke="black" />
-                    <circle cx="18" cy="18" r="6" stroke="black" />
-                  </svg>
+                  <img src={Upload} alt="" />
                 </div>
               </div>
               <h3>Additional Information</h3>
