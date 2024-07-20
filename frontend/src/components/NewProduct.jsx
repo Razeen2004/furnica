@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import AdminNav from './AdminNav';
 
-const ReviewProduct = () => {
+const NewProduct = () => {
   return (
     <div className='admin'>
         <AdminNav />
@@ -44,8 +44,8 @@ const ReviewProduct = () => {
           </div>
           <div className="right">
             <div className="product-btn">
-              <h2>All Products</h2>
-              <Link to="/admin/product/new" >Add New</Link>
+              <h2>Create a Product</h2>
+              {/* <button>Add New</button> */}
             </div>
 
             
@@ -55,4 +55,4 @@ const ReviewProduct = () => {
   )
 }
 
-export default ReviewProduct
+export default NewProduct

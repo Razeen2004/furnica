@@ -151,7 +151,8 @@
     justify-content: space-between;
 }
 
-.admin .container .right .product-btn button{
+.admin .container .right .product-btn a{
+    text-decoration: none;
     padding: 8px 10px;
     border: none;
     border-radius: 5px;
