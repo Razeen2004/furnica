@@ -233,6 +233,7 @@
 }
 
 .admin .container .right .create-product .mid-sec .base-info input,
+.admin .container .right .create-product .mid-sec .base-info select,
 .admin .container .right .create-product .mid-sec .base-info textarea,
 .admin .container .right .create-product .left-sec .base-info input,
 .admin .container .right .create-product .left-sec .base-info textarea{

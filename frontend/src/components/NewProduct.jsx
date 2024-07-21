@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import AdminNav from './AdminNav';
 
 import Upload from '../assets/uploadImg.png';
 const NewProduct = () => {
+
+  const [price,setPrice] = useState();
+  const [sale, setSale] = useState();
+  const [finalPrice, setFinalPrice] = useState(0);
+
+
+
   return (
     <div className='admin'>
       <AdminNav />
@@ -93,9 +100,18 @@ const NewProduct = () => {
               <h3>Additional Information</h3>
               <div className="base-info">
                 <h5>Category:</h5>
-                <input type="text" placeholder='Select Category' />
+                <select name="pets" id="pet-select">
+                  <option value="">Select Category</option>
+                  <option value="dining">Dining</option>
+                  <option value="living">Living</option>
+                  <option value="bedroom">Bedroom</option>
+                </select>
                 <h5>Description:</h5>
                 <textarea name="" placeholder='Enter description your product' id=""></textarea>
+              </div>
+              <div className="base-info">
+                <h5>Final Price:</h5>
+                <input type="number" placeholder={"$" + finalPrice} disabled />
               </div>
             </div>
             <div className="right-sec">
