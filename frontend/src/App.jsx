@@ -14,6 +14,7 @@ import Dashboard from './components/Dashboard';
 import Orders from './components/Orders';
 import ReviewProduct from './components/ReviewProduct';
 import NewProduct from './components/NewProduct';
+import Settings from './components/Settings';
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
             <Route path="/admin/product" element={<ReviewProduct/>} />
             <Route path="/admin/product/new" element={<NewProduct/>} />
             <Route path="/admin/orders" element={<Orders/>} />  
+            <Route path="/admin/settings" element={<Settings/>} />
             <Route exact path="/admin" element={<Dashboard/>} />
 
           </Routes>
