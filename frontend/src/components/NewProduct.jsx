@@ -5,9 +5,27 @@ import AdminNav from './AdminNav';
 import Upload from '../assets/uploadImg.png';
 const NewProduct = () => {
 
-  const [price,setPrice] = useState();
-  const [sale, setSale] = useState();
+  const [price, setPrice] = useState();
+  const [salePercentage, setSalePercentage] = useState(0);
   const [finalPrice, setFinalPrice] = useState(0);
+
+  const handlePriceChange = (e) => {
+    const value = parseFloat(e.target.value);
+    setPrice(value);
+    calculateFinalPrice(value, salePercentage);
+  };
+
+  const handleSalePercentageChange = (e) => {
+    const value = parseFloat(e.target.value);
+    setSalePercentage(value);
+    calculateFinalPrice(price, value);
+  };
+
+  const calculateFinalPrice = (price, salePercentage) => {
+    const discount = (price * salePercentage) / 100;
+    const finalPrice = price - discount;
+    setFinalPrice(finalPrice);
+  };
 
 
 
@@ -76,9 +94,11 @@ const NewProduct = () => {
               <h3>Details</h3>
               <div className="base-info">
                 <h5>Price:</h5>
-                <input type="number" placeholder='$199' />
+                <input type="number" placeholder='$199' value={price}
+                  onChange={handlePriceChange} />
                 <h5>Sale:</h5>
-                <input type="number" placeholder='50%' />
+                <input type="number" placeholder='50%' value={salePercentage}
+                  onChange={handleSalePercentageChange} />
               </div>
             </div>
             <div className="mid-sec">
@@ -111,7 +131,7 @@ const NewProduct = () => {
               </div>
               <div className="base-info">
                 <h5>Final Price:</h5>
-                <input type="number" placeholder={"$" + finalPrice} disabled />
+                <input type="number" value={finalPrice} placeholder={"$"} disabled />
               </div>
             </div>
             <div className="right-sec">
